@@ -51,8 +51,6 @@ Number of classes = 43
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
-
-
 ![alt text][image1]
 
 ### Design and Test a Model Architecture
@@ -152,9 +150,9 @@ The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 0.99999845         			| Speed limit (30km/h)   									| 
+| 0.9935523         			| Speed limit (30km/h)   									| 
 | 1.0     				| Yield 										|
-| 1.0					| Road narrows on the right											|
+| 0.9929087					| Road narrows on the right											|
 | 1.0	      			| Road	work				 				|
 | 1.0				    | Keep right      							|
 
@@ -163,7 +161,7 @@ Top sofmax probability indices:
 [ 1 13 24 25 38]
 
 Top sofmax probability values:
-[0.99999845 1.         1.         1.         1.        ]
+[0.9935523 1.        0.9929087 1.        1.       ]
 
 Predicted Labels:
 [ 1 13 24 25 38]
