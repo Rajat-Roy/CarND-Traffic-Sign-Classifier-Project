@@ -21,7 +21,7 @@ The goals / steps of this project are the following:
 [image2]: ./writeup-images/unprocessed-with-labels.jpg "Un-Processed"
 [image3]: ./writeup-images/processed.jpg "processed"
 [image4]: ./writeup-images/unlabeled.jpg "un labeled"
-[image5]: ./writeup-images/predicted.jpg "predicted"
+[image5]: ./writeup-images/predict.jpg "predicted"
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
@@ -132,16 +132,15 @@ My final model results were:
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
-These are un-labeled.
 ![alt text][image4]
+These are un-labeled.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
-
 ![alt text][image5]
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -151,16 +150,25 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 0.99999845         			| Speed limit (30km/h)   									| 
+| 1.0     				| Yield 										|
+| 1.0					| Road narrows on the right											|
+| 1.0	      			| Road	work				 				|
+| 1.0				    | Keep right      							|
 
+```
+Top sofmax probability indices:
+[ 1 13 24 25 38]
 
-For the second image ... 
+Top sofmax probability values:
+[0.99999845 1.         1.         1.         1.        ]
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+Predicted Labels:
+[ 1 13 24 25 38]
 
+Actual Labels:
+[1, 13, 24, 25, 38]
 
+Correct Predictions:
+[ True  True  True  True  True]
+```
