@@ -106,13 +106,18 @@ My final model consisted of the following layers:
 | RELU |
 | Fully connected		| outputs 43        									|
 | RELU |
-| Softmax				|
+| Softmax				| outputs 43         |
  
 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+To train the model, I adapted from the LeNet architecture with few modifications.
+* Depending on the number of classification, which is 43 in this case, I chose to set 90 filters for the first conv-net, a filter size of 7x7 gave good results.
+* For the second conv-net, I chose 5x5 filter to shrink the output at reduced the filters to 60
+* Then after flattening the outputs from the conv-net I was left with 960 features.
+To classify these features into 43 classes I used 5 Fully Connected neural networks.
+It gradually classified them into half the number of features each time finally getting 43 classes.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
