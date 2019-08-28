@@ -156,6 +156,8 @@ The top five soft max probabilities were
 | 1.0	      			| Road	work				 				|
 | 1.0				    | Keep right      							|
 
+Below is the output from code cell 14 of the Ipython notebook.
+
 ```
 Top sofmax probability indices:
 [ 1 13 24 25 38]
